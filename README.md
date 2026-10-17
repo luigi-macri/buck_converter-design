@@ -1,1 +1,1 @@
-# buck_convertitore-design
+# buck_converter-design
