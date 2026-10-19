@@ -20,7 +20,11 @@ Progetto di base per un convertitore DC-DC step-down (Buck).
 
 ## Confronto Teoria vs Simulazione
 
-| Condizione | Duty Cycle (D) | Tensione di Uscita (Vout) | Note |
+| Parametro | Ideale (Teoria) | LTspice con Schottky | LTspice con parassiti |
 | :--- | :--- | :--- | :--- |
-| **Teoria ideale** | 0,417 | 5,0 V | Nessuna perdita considerata |
-| **LTspice (reale)** | 0,435 | ~5,0 V | Diodo Schottky 1N5819 (Vf ≈ 0,4 V) e Ron = 0,05 Ω |
+| **Duty Cycle (D)** | 0,417 | 0,435 | 0,435 |
+| **Vout media** | 5,0 V | 4,98 V | 4,92 V |
+| **Ripple picco-picco** | 50 mV | 44 mV | 55 mV |
+| **Imin** | 0,85 A | 0,84 A | 0,83 A |
+| **Imax** | 1,15 A | 1,15 A | 1,14 A |
+| **Efficienza (η)** | 100 % | ~93 % | 94 % |
