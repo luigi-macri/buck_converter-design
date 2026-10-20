@@ -33,3 +33,6 @@ Progetto di base per un convertitore DC-DC step-down (Buck).
 
 ### Analisi dei risultati
 Rispetto al caso ideale, il duty cycle $D$ deve salire da $0,417$ a $0,435$ per compensare la caduta di tensione diretta ($V_f \approx 0,4\text{ V}$) introdotta dal diodo Schottky `1N5819` durante la fase di conduzione. Quando si aggiungono i componenti parassiti a parità di $D = 0,435$, la tensione media $V_{out}$ subisce un lieve calo a causa delle cadute di tensione resistive sulla resistenza di conduzione dell'interruttore ($R_{on} = 50\text{ m}\Omega$) e sulla resistenza serie dell'induttore ($R_{ser} = 50\text{ m}\Omega$), mentre l'ESR del condensatore ($100\text{ m}\Omega$) fa salire il ripple di tensione. Le perdite di efficienza (che portano $\eta$ dal $100\%$ ideale a circa il $95,6\%$ con il solo diodo e al $94\%$ nel modello completo) dipendono principalmente dalla potenza dissipata sul diodo in conduzione e, in seconda battuta, dalle perdite per effetto Joule ($R \cdot I^2$) sulle resistenze parassite di interruttore, induttore e condensatore.
+
+## Prossimi passi
+* Confronto sperimentale di efficienza con misure reali a banco tra un regolatore lineare **7805** e un **modulo buck** DC-DC step-down.
